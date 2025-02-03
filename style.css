@@ -1,61 +1,196 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0d0d0d; /* Dark background */
-    color: #00ffcc; /* Neon text */
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d; /* Deep black background for that techy vibe */
+    color: #e0e0e0; /* Light gray text for readability */
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #03045e, #0077b6);
-    padding: 20px;
+    background-color: #111; /* Darker header background */
+    color: #00c8c8; /* Neon cyan for tech accent */
+    padding: 40px 20px;
     text-align: center;
-    box-shadow: 0px 0px 20px #00ffcc;
+    text-shadow: 0px 0px 15px rgba(0, 200, 200, 0.8);
+    box-shadow: 0px 0px 20px rgba(0, 200, 200, 0.8);
+    transition: background-color 0.3s ease;
 }
 
-/* Neon Text Effect */
-h1, h2 {
-    font-size: 2rem;
-    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+header h1 {
+    font-size: 4rem;
+    color: #00c8c8;
+    text-shadow: 0px 0px 30px rgba(0, 200, 200, 0.8), 0px 0px 50px rgba(0, 200, 200, 0.9);
 }
 
 /* Navigation */
+nav {
+    text-align: center;
+    margin-top: 30px;
+}
+
 nav ul {
     list-style: none;
-    padding: 0;
+    display: inline-block;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 0 30px;
 }
 
 nav a {
+    font-size: 1.3rem;
     text-decoration: none;
-    color: #00ffcc;
+    color: #00c8c8;
     font-weight: bold;
-    font-size: 18px;
-    text-shadow: 0px 0px 10px #00ffcc;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 5px #00c8c8, 0px 0px 10px #00c8c8;
+    transition: color 0.4s ease, text-shadow 0.4s ease;
 }
 
-/* Sections */
-section {
-    padding: 50px 10%;
+nav a:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 20px #00c8c8, 0px 0px 40px #00c8c8;
 }
 
-/* Product Cards */
-.product {
-    background: rgba(0, 255, 204, 0.1); /* Transparent neon effect */
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: url('your-tech-background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Hero Text with Neon Effect */
+.hero-section h1 {
+    font-size: 5rem;
+    color: #00c8c8;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 40px rgba(0, 200, 200, 0.8), 0px 0px 70px rgba(0, 200, 200, 0.8);
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+/* Neon Glowing Animation */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0px 0px 20px rgba(0, 200, 200, 0.8), 0px 0px 30px rgba(0, 200, 200, 0.6);
+    }
+    100% {
+        text-shadow: 0px 0px 40px rgba(0, 200, 200, 1), 0px 0px 60px rgba(0, 200, 200, 1);
+    }
+}
+
+/* Tech Feature Cards */
+.feature-card {
+    background: rgba(0, 200, 200, 0.1);
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    box-shadow: 0px 0px 15px #00ffcc;
-    transition: transform 0.3s;
+    padding: 40px;
+    margin: 20px;
+    width: 300px;
+    box-shadow: 0px 0px 30px rgba(0, 200, 200, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: center;
 }
 
-.product:hover {
-    transform: 
+.feature-card h3 {
+    font-size: 1.8rem;
+    color: #00c8c8;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 20px #00c8c8, 0px 0px 40px #00c8c8;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 40px rgba(0, 200, 200, 1);
+    background-color: rgba(0, 200, 200, 0.2);
+}
+
+/* Buttons with Neon Effect */
+button {
+    background: #00c8c8;
+    color: #121212;
+    padding: 20px 40px;
+    border: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 200, 200, 0.6);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: #008c8c;
+    box-shadow: 0px 0px 40px rgba(0, 200, 200, 1);
+}
+
+/* Footer with Neon Accents */
+footer {
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px -10px 40px rgba(0, 200, 200, 0.8);
+}
+
+/* Floating Neon Button for Chatbot */
+button.chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px;
+    background: #00c8c8;
+    color: #121212;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0px 0px 30px rgba(0, 200, 200, 0.6);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.chatbot-btn:hover {
+    background: #008c8c;
+    box-shadow: 0px 0px 50px rgba(0, 200, 200, 1);
+}
+
+/* Neon Border Effect for Tech Sections */
+.section-border {
+    border: 2px solid rgba(0, 200, 200, 0.6);
+    padding: 20px;
+    margin: 30px 0;
+    transition: border-color 0.3s ease;
+}
+
+.section-border:hover {
+    border-color: rgba(0, 200, 200, 1);
+}
+
+/* Final Styling */
+section {
+    padding: 60px 20px;
+    color: #e0e0e0;
+    text-align: center;
+}
