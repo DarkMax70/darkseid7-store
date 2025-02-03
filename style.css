@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #03045e, #0077b6); /* Dark blue gradient */
+    background: linear-gradient(90deg, #03045e, #0077b6);
     padding: 20px;
     text-align: center;
     box-shadow: 0px 0px 20px #00ffcc;
@@ -46,49 +46,16 @@ section {
     padding: 50px 10%;
 }
 
-/* Buttons */
-button {
-    background: #00ffcc;
-    color: #0d0d0d;
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-shadow: 0px 0px 10px #00ffcc;
+/* Product Cards */
+.product {
+    background: rgba(0, 255, 204, 0.1); /* Transparent neon effect */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
     box-shadow: 0px 0px 15px #00ffcc;
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
-button:hover {
-    background: #0088cc;
-    box-shadow: 0px 0px 25px #00ffcc;
-}
-
-/* Footer */
-footer {
-    background: #111;
-    padding: 10px;
-    color: #00ffcc;
-    text-shadow: 0px 0px 10px #00ffcc;
-}
-
-/* Chatbot Button */
-button.chatbot-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px;
-    background: #0077b6;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-shadow: 0px 0px 10px #00ffcc;
-    box-shadow: 0px 0px 15px #00ffcc;
-}
-
-button.chatbot-btn:hover {
-    background: #005c99;
-    box-shadow: 0px 0px 25px #00ffcc;
-}
+.product:hover {
+    transform: 
