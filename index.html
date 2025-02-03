@@ -3,136 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darkseid7 Store</title>
+    <title>Darkseid7 Digital Store</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Darkseid7 Digital Store</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#store">Store</a></li>
-                <li><a href="#services">IT Support</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">IT Support</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
+    <section>
         <h2>Welcome to Darkseid7</h2>
         <p>Explore top digital products, IT solutions, and futuristic tools.</p>
     </section>
 
-    <section id="store">
+    <section class="products">
         <h2>Digital Products</h2>
         <div class="product">
-            <img src="product1.jpg" alt="Software 1">
-            <h3>Software Name</h3>
+            <h3>Software 1</h3>
             <p>High-performance software for your needs.</p>
-            <button onclick="purchase('Software Name', '9.99')">Buy Now - $9.99</button>
+            <button onclick="purchase('Software 1', 9.99)">Buy Now - $9.99</button>
         </div>
         <div class="product">
-            <img src="product2.jpg" alt="AI Tool">
             <h3>AI Tool</h3>
             <p>Latest AI-driven software.</p>
-            <button onclick="purchase('AI Tool', '19.99')">Buy Now - $19.99</button>
+            <button onclick="purchase('AI Tool', 19.99)">Buy Now - $19.99</button>
         </div>
     </section>
 
-    <section id="services">
+    <section>
         <h2>IT Support Services</h2>
         <p>Offering Windows installation, tech troubleshooting, and software solutions.</p>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:retromaxcyb@gmail.com">retromaxcyb@gmail.com</a></p>
-        <p>Follow us on:</p>
-        <ul>
-            <li><a href="https://tiktok.com/@darkseid7000" target="_blank">TikTok</a></li>
-            <li><a href="https://instagram.com/darkseid-700" target="_blank">Instagram</a></li>
-            <li><a href="https://twitter.com/darkseid" target="_blank">Twitter</a></li>
-        </ul>
-    </section>
-
-    <div id="chatbot">💬 Live Chat</div>
-
     <footer>
-        <p>&copy; 2025 Darkseid7 - All Rights Reserved</p>
+        <p>Contact Us: <a href="mailto:retromaxcyb@gmail.com">retromaxcyb@gmail.com</a></p>
+        <p>Follow us on:</p>
+        <a href="https://www.instagram.com/darkseid_700" target="_blank">Instagram</a> |
+        <a href="https://www.tiktok.com/@darkseid7000" target="_blank">TikTok</a>
+        <p>© 2025 Darkseid7 - All Rights Reserved</p>
     </footer>
+
+    <script>
+        function purchase(productName, price) {
+            window.location.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=retromaxcyb@gmail.com&item_name=${productName}&amount=${price}&currency_code=USD`;
+        }
+
+        // Chatbot Simulation
+        function chatbot() {
+            let userMessage = prompt("Live Chat: How can we assist you?");
+            if (userMessage) {
+                alert("Thank you! We'll get back to you soon.");
+            }
+        }
+    </script>
+
+    <button onclick="chatbot()" style="position:fixed; bottom:20px; right:20px; padding:10px; background:#0077b6; color:white; border:none; cursor:pointer;">
+        💬 Live Chat
+    </button>
+
 </body>
 </html>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0d0d0d;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
 
-header {
-    background: linear-gradient(90deg, #03045e, #0077b6);
-    padding: 20px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #00d4ff;
-    font-weight: bold;
-}
-
-section {
-    padding: 50px 10%;
-}
-
-.product {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-}
-
-button {
-    background: #00aaff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0088cc;
-}
-
-footer {
-    background: #111;
-    padding: 10px;
-}
-function purchase(productName, price) {
-    window.location.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=retromaxcyb@gmail.com&item_name=${productName}&amount=${price}&currency_code=USD`;
-}
-
-// Simple Live Chat Simulation
-document.getElementById("chatbot").addEventListener("click", function() {
-    alert("Live Chat: How can we assist you?");
-});
