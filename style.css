@@ -1,196 +1,65 @@
-/* Global Reset */
-* {
+/* Background */
+body {
+    background: linear-gradient(to bottom right, #121212, #1a1a1a); /* Dark, techy colors */
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #0d0d0d; /* Deep black background for that techy vibe */
-    color: #e0e0e0; /* Light gray text for readability */
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Header */
-header {
-    background-color: #111; /* Darker header background */
-    color: #00c8c8; /* Neon cyan for tech accent */
-    padding: 40px 20px;
-    text-align: center;
-    text-shadow: 0px 0px 15px rgba(0, 200, 200, 0.8);
-    box-shadow: 0px 0px 20px rgba(0, 200, 200, 0.8);
-    transition: background-color 0.3s ease;
-}
-
-header h1 {
-    font-size: 4rem;
-    color: #00c8c8;
-    text-shadow: 0px 0px 30px rgba(0, 200, 200, 0.8), 0px 0px 50px rgba(0, 200, 200, 0.9);
-}
-
-/* Navigation */
-nav {
-    text-align: center;
-    margin-top: 30px;
-}
-
-nav ul {
-    list-style: none;
-    display: inline-block;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 30px;
-}
-
-nav a {
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: #00c8c8;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: 0px 0px 5px #00c8c8, 0px 0px 10px #00c8c8;
-    transition: color 0.4s ease, text-shadow 0.4s ease;
-}
-
-nav a:hover {
-    color: #ffffff;
-    text-shadow: 0px 0px 20px #00c8c8, 0px 0px 40px #00c8c8;
-}
-
-/* Hero Section */
-.hero-section {
-    height: 100vh;
-    background: url('your-tech-background.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #f1f1f1;
-    text-align: center;
-    position: relative;
-    z-index: 1;
     overflow: hidden;
 }
 
-/* Hero Text with Neon Effect */
-.hero-section h1 {
-    font-size: 5rem;
-    color: #00c8c8;
-    letter-spacing: 3px;
-    text-shadow: 0px 0px 40px rgba(0, 200, 200, 0.8), 0px 0px 70px rgba(0, 200, 200, 0.8);
-    animation: neonGlow 1.5s infinite alternate;
+/* Neon Glow Effect */
+h1, h2, h3, p {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.4);
 }
 
-/* Neon Glowing Animation */
-@keyframes neonGlow {
-    0% {
-        text-shadow: 0px 0px 20px rgba(0, 200, 200, 0.8), 0px 0px 30px rgba(0, 200, 200, 0.6);
-    }
-    100% {
-        text-shadow: 0px 0px 40px rgba(0, 200, 200, 1), 0px 0px 60px rgba(0, 200, 200, 1);
-    }
-}
-
-/* Tech Feature Cards */
-.feature-card {
-    background: rgba(0, 200, 200, 0.1);
-    border-radius: 10px;
-    padding: 40px;
-    margin: 20px;
-    width: 300px;
-    box-shadow: 0px 0px 30px rgba(0, 200, 200, 0.8);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    text-align: center;
-}
-
-.feature-card h3 {
-    font-size: 1.8rem;
-    color: #00c8c8;
-    letter-spacing: 1px;
-    text-shadow: 0px 0px 20px #00c8c8, 0px 0px 40px #00c8c8;
-}
-
-.feature-card p {
-    font-size: 1.1rem;
-    color: #e0e0e0;
-    line-height: 1.6;
-    margin-top: 10px;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 0px 40px rgba(0, 200, 200, 1);
-    background-color: rgba(0, 200, 200, 0.2);
-}
-
-/* Buttons with Neon Effect */
+/* Add subtle glowing borders to buttons */
 button {
-    background: #00c8c8;
-    color: #121212;
-    padding: 20px 40px;
-    border: none;
-    font-size: 1.1rem;
-    text-transform: uppercase;
+    background-color: #333;
+    border: 2px solid #0ff;
+    color: #0ff;
+    padding: 10px 20px;
     cursor: pointer;
-    letter-spacing: 2px;
+    font-size: 16px;
     border-radius: 5px;
-    box-shadow: 0px 0px 25px rgba(0, 200, 200, 0.6);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background: #008c8c;
-    box-shadow: 0px 0px 40px rgba(0, 200, 200, 1);
-}
-
-/* Footer with Neon Accents */
-footer {
-    background-color: #121212;
-    color: #e0e0e0;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px -10px 40px rgba(0, 200, 200, 0.8);
-}
-
-/* Floating Neon Button for Chatbot */
-button.chatbot-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 12px;
-    background: #00c8c8;
+    background-color: #0ff;
     color: #121212;
-    border: none;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+/* Tech photo styling */
+.tech-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Mouse Echo Effect */
+.mouse-trail {
+    position: absolute;
+    pointer-events: none;
     border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.5rem;
-    box-shadow: 0px 0px 30px rgba(0, 200, 200, 0.6);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(0, 255, 255, 0.5);
+    width: 20px;
+    height: 20px;
+    animation: trail-animation 0.5s ease-out forwards;
+    opacity: 1;
+    z-index: 9999;
 }
 
-button.chatbot-btn:hover {
-    background: #008c8c;
-    box-shadow: 0px 0px 50px rgba(0, 200, 200, 1);
+@keyframes trail-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
 }
 
-/* Neon Border Effect for Tech Sections */
-.section-border {
-    border: 2px solid rgba(0, 200, 200, 0.6);
-    padding: 20px;
-    margin: 30px 0;
-    transition: border-color 0.3s ease;
-}
-
-.section-border:hover {
-    border-color: rgba(0, 200, 200, 1);
-}
-
-/* Final Styling */
-section {
-    padding: 60px 20px;
-    color: #e0e0e0;
-    text-align: center;
-}
